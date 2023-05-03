@@ -88,7 +88,7 @@ function comprarStock(){
         case 1: 
         alert("Su eleccion: \nFender Stratocaster");
         resultado = usdAr(guitarra1.precio, usa);
-        alert("El precio en pesos es  $" + resultado);
+        alert("El precio final es de ARS$" + resultado);
         
         let respuestaCompra1 = prompt("Desdea realizar la compra? (si/no)")
         if(respuestaCompra1 === "si"){
@@ -114,7 +114,7 @@ function comprarStock(){
         case 2:
             alert("Su eleccion: \nGibson Les Paul");
             resultado = usdAr(guitarra2.precio, usa);
-            alert("El precio en pesos es  $" + resultado);            
+            alert("El precio final es de ARS$" + resultado);            
             let respuestaCompra2 = prompt("Desdea realizar la compra? (si/no)")
             if(respuestaCompra2 === "si"){
                 function buscarTarjeta(ingresarTarjeta) {
@@ -140,7 +140,7 @@ function comprarStock(){
         case 3:
             alert("Su eleccion: \nFender Telecaster");
             resultado = usdAr(guitarra3.precio, usa);
-            alert("El precio en pesos es  $" + resultado);
+            alert("El precio final es de ARS$" + resultado);
             
             let respuestaCompra3 = prompt("Desdea realizar la compra? (si/no)")
             if(respuestaCompra3 === "si"){
@@ -167,7 +167,7 @@ function comprarStock(){
         case 4:
             alert("Su eleccion: \nEVH Frankie");
             resultado = usdAr(guitarra4.precio, usa);
-            alert("El precio en pesos es  $" + resultado);
+            alert("El precio final es de ARS$" + resultado);
             
             let respuestaCompra4 = prompt("Desdea realizar la compra? (si/no)")
             if(respuestaCompra4 === "si"){
