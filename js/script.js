@@ -68,7 +68,7 @@ function menu(){
     return opcion;
 }
 
-//FUNCION REGISTRO
+
 const usdAr = (precio, usa) => {
     const calcular = precio * usa;
     return calcular; };
