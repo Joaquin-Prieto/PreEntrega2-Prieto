@@ -11,7 +11,7 @@ function ingresarUsuario(){
     alert("Crea tu cuenta de Planeta Guitarra")
     let mail = prompt ("Ingrese un mail");
     let contraseña = prompt ("Ingrese su contraseña");    
-    let tarjetacredito = prompt("Ingrese su numero de Tarjeta de credito");
+    let tarjetacredito = prompt("Registre un numero de Tarjeta de credito (lo usará si realiza una compra)");
     let nuevoUsuario = new Usuario( mail, contraseña, tarjetacredito);
     usuariosLista.push(nuevoUsuario);
     console.log(usuariosLista)
