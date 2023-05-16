@@ -1,0 +1,97 @@
+  /* if dark-mode class is not added set this background */
+  body {
+    background: white;
+    transition: 0.5s;
+  }
+  .container{
+      text-align: center;
+      padding: 70px;
+  }
+  #ChangeTheme {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  label{
+    display: block;
+    height: 15px;
+    width: 60px;
+    position: relative;
+    margin: 0px auto;
+  }
+  span.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #dadada;
+    border-radius: 30px;
+  }
+  span.slide:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: -2px;
+    left: 0px;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px;
+  }
+  .txt {
+    position: relative;
+  }
+  .txt p:nth-child(1) {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.5s;
+  }
+  #ChangeTheme:checked + span.slide:before {
+    transform: translatex(40px);
+  }
+  /* if dark-mode class is added set this background */
+  
+ 
+  .dark-mode .txt p:nth-child(1) {
+    color: #FFFF;
+    font-weight: normal;
+  }
+  .dark-mode .txt p:nth-child(2) {
+    color: white;
+    font-weight: bold;
+  }
+  
+  body.dark-mode{
+      background: #616161 !important;
+      
+  }
+  body.dark-mode a.btn{
+      background: #333 !important;
+      color: #999 !important;
+  }
+  body.dark-mode{
+      color: white !important;
+  }
+  body.dark-mode #seccion-carrito{
+    background-color: #4d4d4d!important;
+    color: white;
+   
+  }
+  body.dark-mode #seccion-carrito span{
+    color:white;
+  }
+  body.dark-mode #seccion-carrito strong{
+    color:white;
+  }
+
+  body.dark-mode #Navbar{
+    background: #242424;
+    color: white;
+  }
+  body.dark-mode #carritodecompras{
+    color: white;
+  }
+  body.dark-mode #Navbar a.u{
+    color:white;
+  }

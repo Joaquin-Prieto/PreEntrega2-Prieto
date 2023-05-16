@@ -1,220 +1,214 @@
-class Usuario {
-    constructor( mail, contraseña, tarjetacredito){
-        this.mail = mail;
-        this.contraseña = contraseña;          
-        this.tarjetacredito = tarjetacredito;
-    }}
 
-    const usuariosLista = []
-
-function ingresarUsuario(){
-    alert("Crea tu cuenta de Planeta Guitarra")
-    let mail = prompt ("Ingrese un mail");
-    let contraseña = prompt ("Ingrese su contraseña");    
-    let tarjetacredito = prompt("Registre un numero de Tarjeta de credito (lo usará si realiza una compra)");
-    let nuevoUsuario = new Usuario( mail, contraseña, tarjetacredito);
-    usuariosLista.push(nuevoUsuario);
-    console.log(usuariosLista)
-}
-ingresarUsuario()
-
-//FUNCION BOTON "HAZ CLICK AQUI" (ACCIONES CON GUITARRAS)
-function GUITARRAS(){
-class Guitarra {
-    constructor(opcionNumero, guitarMarca, guitarModelo, guitarNeck, guitarColor, precio) {
-        this.opcionNumero = opcionNumero;
-        this.guitarMarca = guitarMarca;
-        this.guitarModelo = guitarModelo;
-        this.guitarNeck = guitarNeck;
-        this.guitarColor = guitarColor;
-        this.precio = precio;
-      }
-      cambioDePrecio(precio) {
-        if (typeof precio == "number") {
-          this.precio = precio;
-        }
-      }
-      toString() {
-        return`
-        Opcion Numero: ${this.opcionNumero}\n
-        Marca: ${this.guitarMarca}\n
-        Modelo: ${this.guitarModelo}\n
-        Material: ${this.guitarNeck}\n
-        Color del cuerpo: ${this.guitarColor}\n
-        Precio en USD: ${this.precio}`;
-      }
-}
-
-
-
-const guitarra1= new Guitarra(1, "Fender", "Stratocaster", "arce tostado", "Siena y rojo", 0);
-const guitarra2= new Guitarra(2, "Gibson","Les Paul", "Maple", "Dorado", 0);
-const guitarra3= new Guitarra(3, "Fender","Telecaster","Maple", "Space blue", 0);
-const guitarra4= new Guitarra(4, "EVH", "Frankie", "Maple", "Classic striped", 0);
-
-const arrayGuitarras= [guitarra1, guitarra2, guitarra3, guitarra4];
-console.log(arrayGuitarras);
-
-guitarra1.cambioDePrecio(450);
-guitarra2.cambioDePrecio(520);
-guitarra3.cambioDePrecio(395);
-guitarra4.cambioDePrecio(400);
-
-//MENU GUITARRAS
-
-function menu(){
-    alert("Te damos la bienvenida a Planeta Guitarra");
-    let opcion= parseInt(prompt("Seleccione una opción: \n\n 1) Comprar Guitarra \n\n 2) Salir" ));
-    return opcion;
-}
-
-
-const usdAr = (precio, usa) => {
-    const calcular = precio * usa;
-    return calcular; };
-    
-    let usa = 475;
-    let resultado = usdAr("", usa);
-
-    //FUNCION DE COMPRA
-function comprarStock(){
-  alert(guitarra1);
-  alert(guitarra2);
-  alert(guitarra3);
-  alert(guitarra4);
-  const opcionElegida = Number(prompt("Elige la opcion que quieres"));
-  
-    switch(opcionElegida){
-        case 1: 
-        alert("Su eleccion: \nFender Stratocaster");
-        resultado = usdAr(guitarra1.precio, usa);
-        alert("El precio final es de ARS$" + resultado);
-        
-        let respuestaCompra1 = prompt("Desdea realizar la compra? (si/no)")
-        if(respuestaCompra1 === "si"){
-            function buscarTarjeta(ingresarTarjeta) {
-                let comprobarTarjeta = prompt("Ingrese su tarjeta de credito");
-                return ingresarTarjeta.tarjetacredito == comprobarTarjeta;}
-                              
-            let resultadoTarjeta = usuariosLista.find(buscarTarjeta);
-            if (resultadoTarjeta == undefined) {
-             alert("Su tarjeta no coincide con la registrada en la cuenta,\nsi quieres cambiarla vuelve a registrarte");
-            } else {
-            alert("compra realizada!");
-            alert("Esperamos verlo nuevamente");;
-            }
-            
-        }else if(respuestaCompra1 === "no"){
-            alert("Compra cancelada.")
-            alert("Esperamos verlo nuevamente");
-        }else{
-            alert("respuesta no valida, vuelve a intentar.")
-        }
-        break;
-        case 2:
-            alert("Su eleccion: \nGibson Les Paul");
-            resultado = usdAr(guitarra2.precio, usa);
-            alert("El precio final es de ARS$" + resultado);            
-            let respuestaCompra2 = prompt("Desdea realizar la compra? (si/no)")
-            if(respuestaCompra2 === "si"){
-                function buscarTarjeta(ingresarTarjeta) {
-                    let comprobarTarjeta = prompt("Ingrese su tarjeta de credito");
-                    return ingresarTarjeta.tarjetacredito == comprobarTarjeta;}
-                 
-                    
-                let resultadoTarjeta = usuariosLista.find(buscarTarjeta);
-                if (resultadoTarjeta == undefined) {
-                 alert("Su tarjeta no coincide con la registrada en la cuenta,\nsi quieres cambiarla vuelve a registrarte");
-                } else {
-                alert("compra realizada!");
-                alert("Esperamos verlo nuevamente");;
-                }
-                
-            }else if(respuestaCompra2 === "no"){
-                alert("Compra cancelada.")
-                alert("Esperamos verlo nuevamente");
-            }else{
-                alert("respuesta no valida, vuelve a intentar.")
-            }
-        break;
-        case 3:
-            alert("Su eleccion: \nFender Telecaster");
-            resultado = usdAr(guitarra3.precio, usa);
-            alert("El precio final es de ARS$" + resultado);
-            
-            let respuestaCompra3 = prompt("Desdea realizar la compra? (si/no)")
-            if(respuestaCompra3 === "si"){
-                function buscarTarjeta(ingresarTarjeta) {
-                    let comprobarTarjeta = prompt("Ingrese su tarjeta de credito");
-                    return ingresarTarjeta.tarjetacredito == comprobarTarjeta;}
-                   
-                    
-                let resultadoTarjeta = usuariosLista.find(buscarTarjeta);
-                if (resultadoTarjeta == undefined) {
-                 alert("Su tarjeta no coincide con la registrada en la cuenta,\nsi quieres cambiarla vuelve a registrarte");
-                } else {
-                alert("compra realizada!");
-                alert("Esperamos verlo nuevamente");;
-                }
-                
-            }else if(respuestaCompra3 === "no"){
-                alert("Compra cancelada.")
-                alert("Esperamos verlo nuevamente");
-            }else{
-                alert("respuesta no valida, vuelve a intentar.")
-            }
-        break;
-        case 4:
-            alert("Su eleccion: \nEVH Frankie");
-            resultado = usdAr(guitarra4.precio, usa);
-            alert("El precio final es de ARS$" + resultado);
-            
-            let respuestaCompra4 = prompt("Desdea realizar la compra? (si/no)")
-            if(respuestaCompra4 === "si"){
-                function buscarTarjeta(ingresarTarjeta) {
-                    let comprobarTarjeta = prompt("Ingrese su tarjeta de credito");
-                    return ingresarTarjeta.tarjetacredito == comprobarTarjeta;}
-            
-                    
-                let resultadoTarjeta = usuariosLista.find(buscarTarjeta);
-                if (resultadoTarjeta == undefined) {
-                 alert("Su tarjeta no coincide con la registrada en la cuenta,\nsi quieres cambiarla vuelve a registrarte");
-                } else {
-                alert("compra realizada!");
-                alert("Esperamos verlo nuevamente");;
-                }
-                
-            }else if(respuestaCompra4 === "no"){
-                alert("Compra cancelada.")
-                alert("Esperamos verlo nuevamente");
-            }else{
-                alert("respuesta no valida, vuelve a intentar.")
-            }
-        break;
-        default:
-            alert("Ese no es un dato válido");
-        break;
+function toggleCart(){
+    var x = document.getElementById("seccion-carrito");
+    if (x.style.display === "none"){
+        x.style.display = "block";
+    }else{
+        x.style.display = "none";
     }
 }
 
+const guitarras= [
+    {id: 1, picture: "./img/StratoOlympicPearl.png", modelo: "Fender Stratocaster Player Plus", precio:213750, imgCarrito: "./img/StratoOlympicPearl(cart).png"},
+    {id: 2, picture: "./img/GibsonLPGolden.png", modelo: "Gibson Les Paul Goldtop - Gold", precio: 247000, imgCarrito: "./img/GibsonLPGolden(cart).png"},
+    {id: 3, picture: "./img/TelecasterDarkNight.png", modelo: "Fender Telecaster American Professional II", precio: 187600, imgCarrito: "./img/TelecasterDarkNight(cart).png"},
+    {id: 4, picture: "./img/EVHFrankie.png", modelo: "EVH Sriped Series Frankenstein", precio: 190000, imgCarrito: "./img/EVHFrankie(cart).png"}
+]
+let carrito = [];
 
-//FUNCION PARA SALIR DEL MENU
+const stock = document.getElementById("stock")
 
-function salir(){
-    alert("Gracias por confiar en nosotros.");
+let cartasGuitarras = "";
+guitarras.forEach((guitarra) => {
+    cartasGuitarras += `
+    <div class="cards">
+                <div class="cardImg"><img src="${guitarra.picture}" alt="img"></div>
+                <div class="cardTxt">
+                    <p>${guitarra.modelo}</p>
+                    <span>ARS ${guitarra.precio}</span>
+                    <button class="btn-añadir-carrito" id="${guitarra.id}" onclick="añadir(${guitarra.id})">Añadir</button>
+                </div>
+            </div>
+    `
+});
+stock.innerHTML = cartasGuitarras
+
+function añadir(id) {
+    //primero encontrar al producto que coincide con el id del botón
+    let guitarraSeleccionada = guitarras.find(instrument => instrument.id == id)
+    console.log(guitarraSeleccionada)
+    //luego ver si ya está en carrito o no
+    if (carrito.some(instrument => instrument.id == id)) {
+
+        //encontrar el índice del productoElegido
+        let indice = carrito.findIndex(instrument => instrument.id == id)
+        //agregar cantidad en ese
+        carrito[indice].cantidad += 1
+        //calcular precioTotal
+        carrito[indice].precioTotal = carrito[indice].cantidad * carrito[indice].precio
+        //alert("el producto ya está en el carrito")
+        console.log("true")
+
+
+
+    } else {
+
+        console.log("false")
+        //construir un nuevo objeto con cantidad
+        const nuevoProductoCarrito = {
+            id: guitarraSeleccionada.id,
+            imgCarrito: guitarraSeleccionada.imgCarrito,
+            modelo: guitarraSeleccionada.modelo,
+            precio: guitarraSeleccionada.precio,
+            cantidad: 1,
+            precioTotal: parseInt(guitarraSeleccionada.precio)
+            //el precioTotal arranca con el valor unitario parseado porque luego hay que multiplicarlo
+
+        }
+
+        //luego pushearlo al carrito
+        carrito.push(nuevoProductoCarrito)
+        console.log(carrito)
+    }
+    renderCarrito(carrito)
+    //calcular total
+    calcularTotal()
 }
 
-//FUNCIONES DE LA PAGINA
+//renderizar carrito
 
-let opcion= menu();
-switch (opcion){
-    case 1:
-        comprarStock();
-        break;
-    case 2:
-        salir();
-        break;
-    default:
-        alert("Opcion no valida");
-        break;    
-}}
+function renderCarrito(cart) {
+    console.log(cart)
+    const carritoCompra = document.getElementById("item-carrito")
+
+    let listaGuitarrasCarrito = "";
+    cart.forEach((guitarra) => {
+        listaGuitarrasCarrito += `            
+            <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="${guitarra.imgCarrito}" width="100" height="100">
+                        <span class="cart-item-title">${guitarra.modelo}</span>
+                    </div>
+                    <span class="cart-price cart-column">ARS ${guitarra.precio}</span>
+                    <div class="cart-quantity cart-column">
+                    <button class="btn-suma-resta" onclick="restar(${guitarra.id})">➖</button>
+                    <p class="numero">${guitarra.cantidad}</p><br>
+                    <button class="btn-suma-resta" onclick="sumar(${guitarra.id})">➕</button>
+                        <button id="btnRemove${guitarra.id}" class="btn btn-danger" type="button" onclick="eliminar(${guitarra.id})">Eliminar</button>
+                    </div>
+                </div>
+        `;
+    });
+
+
+    carritoCompra.innerHTML = listaGuitarrasCarrito
+    console.log("anda")
+   
+}
+
+//botones del carrito X
+
+function eliminar(id) {
+    const carritoCompra = document.getElementById("item-carrito")
+    console.log(id)
+    //filtramos los que no coinciden con el id del click
+    let nuevoCarrito = carrito.filter(instrument => instrument.id !== id)
+    console.log(nuevoCarrito)
+    //igualar carrito a nuevoCarrito
+    carrito = [...nuevoCarrito]
+    //borramos el carrito de la pantalla
+    carritoCompra.innerHTML = "<p>Carrito Vacío</p>";
+    //renderizamos de nuevo
+    renderCarrito(nuevoCarrito)
+    console.log(carrito) 
+
+    calcularTotal()
+}
+
+//botones del carrito + y -
+
+function sumar(id) {
+    console.log('suma '+ calcularTotal)
+    //sumo cantidades
+    carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad += 1
+    //sumo precioTotal
+    carrito[carrito.findIndex(guitarra => guitarra.id == id)].precioTotal = carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad * carrito[carrito.findIndex(guitarra => guitarra.id == id)].precio
+
+    renderCarrito(carrito)
+    calcularTotal()
+}
+
+function restar(id) {
+    console.log('resta '+ calcularTotal)
+
+    //uso el condicional para que no baje la cantidad a números negativos
+    if (carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad > 0) {
+        carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad -= 1
+
+        //resto precioTotal
+        carrito[carrito.findIndex(guitarra => guitarra.id == id)].precioTotal = carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad * carrito[carrito.findIndex(guitarra => guitarra.id == id)].precio
+
+
+        renderCarrito(carrito)
+        calcularTotal()
+    }
+}
+
+//botón de vaciar carrito
+
+function vaciar() {
+    console.log("vaciar")
+    carrito = []
+    renderCarrito(carrito)
+    calcularTotal()
+    alert('Su compra ha sido realizada!')
+
+}
+
+//cálculo total
+
+function calcularTotal() {
+    const totalCarrito = carrito.map(item => item.precioTotal).reduce((prev, curr) => prev + curr, 0);
+    console.log(totalCarrito)
+    let total = document.getElementById("precio-total")
+    total.innerText = `ARS ${totalCarrito}`
+}
+calcularTotal()
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+var checkbox = document.getElementById("ChangeTheme"); 
+
+
+if (localStorage.getItem("mode") == "dark") {
+  darkmode(); 
+} else {
+  nodark();
+}
+
+
+checkbox.addEventListener("change", function() {
+ 
+  if (checkbox.checked) {
+    darkmode(); 
+  } else {
+    nodark(); 
+  }
+});
+
+
+function darkmode() {
+  document.body.classList.add("dark-mode");
+  checkbox.checked = true; 
+  localStorage.setItem("mode", "dark");
+}
+
+//function for checkbox when checkbox is not checked
+function nodark() {
+  document.body.classList.remove("dark-mode"); 
+  checkbox.checked = false; 
+  localStorage.setItem("mode", "light"); 
+}

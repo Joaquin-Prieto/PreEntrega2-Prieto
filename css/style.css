@@ -4,19 +4,24 @@
   box-sizing: border-box; }
 
 #Navbar {
-  background-color: #d4d4d4; }
+  background-color: #d4d4d4;
+  height: 80px; }
   #Navbar ul {
-    justify-content: center;
-    display: inline-block; }
-    #Navbar ul li {
-      display: inline-block;
-      list-style: none;
-      margin-left: 30px;
-      margin-right: 30px; }
-      #Navbar ul li a {
-        text-decoration: none;
-        color: black;
-        height: 30px; }
+    padding: 0px !important; }
+  #Navbar li {
+    display: inline-block;
+    list-style: none; }
+    #Navbar li a {
+      text-decoration: none;
+      color: black;
+      height: 30px; }
+
+#nav__container {
+  display: inline-flex !important;
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
+  margin-top: 0; }
 
 .u {
   display: inline-block;
@@ -39,15 +44,77 @@
   right: 0;
   left: auto; }
 
-#Nav_logo {
-  width: 80px;
-  height: 80px; }
-
 #ul__nav {
-  width: 400px;
-  height: 30px;
+  width: 900px;
+  height: 40px;
   margin-left: auto;
   margin-right: auto; }
+
+#nav_lista {
+  display: inline-flex !important;
+  width: 400px;
+  height: 80px;
+  justify-content: space-between; }
+
+#Nav_logo {
+  list-style: none;
+  display: inline;
+  grid-column: 1; }
+  #Nav_logo img {
+    width: 80px;
+    height: 80px; }
+
+#nav_lista_1 {
+  grid-column: 2;
+  height: 40px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#nav_lista_2 {
+  grid-column: 3;
+  height: 40px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#nav_lista_3 {
+  grid-column: 4;
+  height: 40px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#nav__cart {
+  display: inline-flex !important;
+  margin-right: 5%;
+  justify-content: space-between;
+  width: 30px;
+  height: 80px; }
+
+#nav_lista_cart {
+  flex-direction: column !important;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#CarritoImg {
+  margin-right: 0;
+  width: 45px;
+  height: 45px; }
+
+#carritodecompras {
+  text-decoration: none;
+  color: black;
+  height: 30px;
+  border: none;
+  background-color: transparent; }
 
 #carouselExampleAutoplaying {
   height: 675px; }
@@ -56,22 +123,305 @@
   width: 100%;
   height: 675px; }
 
-button {
+#stock {
+  width: 1200px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  height: 130px;
-  width: 130px;
-  background-color: #6bddae;
-  border: none;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 550px 550px; }
+
+.cards {
+  display: grid;
+  grid-template-rows: 304px 146px;
+  width: 304px;
+  height: 450px;
+  margin: 50px;
   border-radius: 10px;
+  cursor: pointer; }
+
+.cards:hover {
+  border: 2px red solid; }
+
+.cardImg {
+  width: 300px;
+  height: 300px; }
+  .cardImg img {
+    border-radius: 10px;
+    margin-right: 2px;
+    margin-top: 2px;
+    width: 100%; }
+
+.cardTxt {
+  height: 146px;
+  width: 300px; }
+  .cardTxt span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold; }
+  .cardTxt button {
+    border-radius: 10px;
+    width: 60px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    transition: height 2s;
+    transition: width 2s;
+    transition: margin-left 2s; }
+  .cardTxt button:hover {
+    width: 65px;
+    height: 40px;
+    margin-left: 10px; }
+  .cardTxt p {
+    margin-top: 20px; }
+
+.d-block w-100 {
+  width: 100%;
+  height: 675px; }
+
+#stock {
+  width: 1200px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 550px 550px; }
+
+.cards {
+  display: grid;
+  grid-template-rows: 304px 146px;
+  width: 304px;
+  height: 450px;
+  margin: 50px;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.cards:hover {
+  border: 2px red solid; }
+
+.cardImg {
+  width: 300px;
+  height: 300px; }
+
+.cardImg img {
+  border-radius: 10px;
+  margin-right: 2px;
+  margin-top: 2px;
+  width: 100%; }
+
+.cardTxt {
+  height: 146px;
+  width: 300px; }
+
+.cardTxt span {
+  display: block;
+  font-size: 20px;
   font-weight: bold; }
 
-#divbutt {
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
+.cardTxt button {
   border-radius: 10px;
-  margin-top: 300px;
-  background-color: #6bddae;
-  height: 150px;
-  width: 150px; }
+  width: 60px;
+  height: 35px;
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  transition: height 2s;
+  transition: width 2s;
+  transition: margin-left 2s; }
+
+.cardTxt button:hover {
+  width: 65px;
+  height: 40px;
+  margin-left: 10px; }
+
+.cardTxt p {
+  margin-top: 20px; }
+
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333; }
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px; }
+
+.cart-row {
+  display: flex; }
+
+.cart-item {
+  width: 45%; }
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333; }
+
+.cart-quantity {
+  width: 35%; }
+
+.cart-item-title {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em; }
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px; }
+
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+  margin-left: 5%; }
+
+.btn-danger:hover {
+  background-color: #CC4C4C; }
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px; }
+
+.cart-row:last-child {
+  border-bottom: 1px solid black; }
+
+.cart-row:last-child .cart-column {
+  border: none; }
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px; }
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px; }
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em; }
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em; }
+
+.numero {
+  width: 40px;
+  text-align: center; }
+
+#seccion-carrito {
+  background-color: #d8d8d8 !important; }
+
+/* if dark-mode class is not added set this background */
+body {
+  background: white;
+  transition: 0.5s; }
+
+.container {
+  text-align: center;
+  padding: 70px; }
+
+#ChangeTheme {
+  width: 0;
+  height: 0;
+  opacity: 0; }
+
+label {
+  display: block;
+  height: 15px;
+  width: 60px;
+  position: relative;
+  margin: 0px auto; }
+
+span.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dadada;
+  border-radius: 30px; }
+
+span.slide:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  top: -2px;
+  left: 0px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px; }
+
+.txt {
+  position: relative; }
+
+.txt p:nth-child(1) {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: 0.5s; }
+
+#ChangeTheme:checked + span.slide:before {
+  transform: translatex(40px); }
+
+/* if dark-mode class is added set this background */
+.dark-mode .txt p:nth-child(1) {
+  color: #FFFF;
+  font-weight: normal; }
+
+.dark-mode .txt p:nth-child(2) {
+  color: white;
+  font-weight: bold; }
+
+body.dark-mode {
+  background: #616161 !important; }
+
+body.dark-mode a.btn {
+  background: #333 !important;
+  color: #999 !important; }
+
+body.dark-mode {
+  color: white !important; }
+
+body.dark-mode #seccion-carrito {
+  background-color: #4d4d4d !important;
+  color: white; }
+
+body.dark-mode #seccion-carrito span {
+  color: white; }
+
+body.dark-mode #seccion-carrito strong {
+  color: white; }
+
+body.dark-mode #Navbar {
+  background: #242424;
+  color: white; }
+
+body.dark-mode #carritodecompras {
+  color: white; }
+
+body.dark-mode #Navbar a.u {
+  color: white; }
