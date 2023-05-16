@@ -34,19 +34,19 @@ guitarras.forEach((guitarra) => {
 stock.innerHTML = cartasGuitarras
 
 function añadir(id) {
-    //primero encontrar al producto que coincide con el id del botón
+    
     let guitarraSeleccionada = guitarras.find(instrument => instrument.id == id)
     console.log(guitarraSeleccionada)
-    //luego ver si ya está en carrito o no
+    
     if (carrito.some(instrument => instrument.id == id)) {
 
-        //encontrar el índice del productoElegido
+        
         let indice = carrito.findIndex(instrument => instrument.id == id)
-        //agregar cantidad en ese
+        
         carrito[indice].cantidad += 1
-        //calcular precioTotal
+        
         carrito[indice].precioTotal = carrito[indice].cantidad * carrito[indice].precio
-        //alert("el producto ya está en el carrito")
+        
         console.log("true")
 
 
@@ -54,7 +54,7 @@ function añadir(id) {
     } else {
 
         console.log("false")
-        //construir un nuevo objeto con cantidad
+      
         const nuevoProductoCarrito = {
             id: guitarraSeleccionada.id,
             imgCarrito: guitarraSeleccionada.imgCarrito,
@@ -66,16 +66,16 @@ function añadir(id) {
 
         }
 
-        //luego pushearlo al carrito
+        
         carrito.push(nuevoProductoCarrito)
         console.log(carrito)
     }
     renderCarrito(carrito)
-    //calcular total
+    
     calcularTotal()
 }
 
-//renderizar carrito
+
 
 function renderCarrito(cart) {
     console.log(cart)
@@ -106,32 +106,32 @@ function renderCarrito(cart) {
    
 }
 
-//botones del carrito X
+
 
 function eliminar(id) {
     const carritoCompra = document.getElementById("item-carrito")
     console.log(id)
-    //filtramos los que no coinciden con el id del click
+    
     let nuevoCarrito = carrito.filter(instrument => instrument.id !== id)
     console.log(nuevoCarrito)
-    //igualar carrito a nuevoCarrito
+   
     carrito = [...nuevoCarrito]
-    //borramos el carrito de la pantalla
+  
     carritoCompra.innerHTML = "<p>Carrito Vacío</p>";
-    //renderizamos de nuevo
+   
     renderCarrito(nuevoCarrito)
     console.log(carrito) 
 
     calcularTotal()
 }
 
-//botones del carrito + y -
+
 
 function sumar(id) {
     console.log('suma '+ calcularTotal)
-    //sumo cantidades
+   
     carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad += 1
-    //sumo precioTotal
+ 
     carrito[carrito.findIndex(guitarra => guitarra.id == id)].precioTotal = carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad * carrito[carrito.findIndex(guitarra => guitarra.id == id)].precio
 
     renderCarrito(carrito)
@@ -141,11 +141,11 @@ function sumar(id) {
 function restar(id) {
     console.log('resta '+ calcularTotal)
 
-    //uso el condicional para que no baje la cantidad a números negativos
+    
     if (carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad > 0) {
         carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad -= 1
 
-        //resto precioTotal
+       
         carrito[carrito.findIndex(guitarra => guitarra.id == id)].precioTotal = carrito[carrito.findIndex(guitarra => guitarra.id == id)].cantidad * carrito[carrito.findIndex(guitarra => guitarra.id == id)].precio
 
 
