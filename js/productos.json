@@ -1,0 +1,46 @@
+[ 
+
+{"id": 1,
+ "picture": "./img/StratoOlympicPearl.png",
+  "modelo": "Fender Stratocaster Player Plus", 
+  "precio":213750, 
+  "imgCarrito": "./img/StratoOlympicPearl(cart).png"
+},
+
+{"id": 2, 
+"picture": "./img/GibsonLPGolden.png",
+ "modelo": "Gibson Les Paul Goldtop - Gold",
+  "precio": 247000, 
+  "imgCarrito": "./img/GibsonLPGolden(cart).png"},
+
+{"id": 3, 
+"picture": "./img/TelecasterDarkNight.png",
+ "modelo": "Fender Telecaster American Professional II",
+  "precio": 187600,
+   "imgCarrito": "./img/TelecasterDarkNight(cart).png"},
+
+{"id": 4, 
+"picture": "./img/EVHFrankie.png",
+ "modelo": "EVH Sriped Series Frankenstein", 
+ "precio": 190000, 
+ "imgCarrito": "./img/EVHFrankie(cart).png"},
+ 
+ {"id": 5, 
+"picture": "./img/FenderAmericanVintage.png",
+ "modelo": "Fender American Vintage 61'", 
+ "precio": 190000, 
+ "imgCarrito": "./img/FenderAmericanVintage(cart).png"},
+ 
+ {"id": 6, 
+ "picture": "./img/AcoustasonicPlayerTelecaster.png",
+  "modelo": "Acoustasonic Player Telecaster", 
+  "precio": 190000, 
+  "imgCarrito": "./img/AcoustasonicPlayerTelecaster(cart).png"},
+  
+  {"id": 7, 
+  "picture": "./img/SGStandardVintage.png",
+   "modelo": "SG Standard 61' Vintage cherry ", 
+   "precio": 190000, 
+   "imgCarrito": "./img/SGStandardVintage(cart).png"}
+
+]

@@ -5,7 +5,7 @@
   }
   .container{
       text-align: center;
-      padding: 70px;
+          padding: 70px;
   }
   #ChangeTheme {
     width: 0;
@@ -13,11 +13,12 @@
     opacity: 0;
   }
   label{
-    display: block;
+    display: inline-block;
     height: 15px;
     width: 60px;
     position: relative;
     margin: 0px auto;
+    margin-left: -55px;
   }
   span.slide {
     position: absolute;
@@ -66,6 +67,10 @@
       background: #616161 !important;
       
   }
+  body.dark-mode #main__carrito{
+    background: #616161 !important;
+    
+}
   body.dark-mode a.btn{
       background: #333 !important;
       color: #999 !important;
@@ -73,15 +78,16 @@
   body.dark-mode{
       color: white !important;
   }
-  body.dark-mode #seccion-carrito{
-    background-color: #4d4d4d!important;
-    color: white;
-   
+  body.dark-mode #seccion-carrito {
+    background-color:rgb(131, 130, 130);
   }
   body.dark-mode #seccion-carrito span{
     color:white;
   }
   body.dark-mode #seccion-carrito strong{
+    color:white;
+  }
+  body.dark-mode #seccion-carrito p{
     color:white;
   }
 
@@ -95,3 +101,22 @@
   body.dark-mode #Navbar a.u{
     color:white;
   }
+  body.dark-mode .modal-content{
+    background-color: #4d4d4d!important;
+    color: black!important;
+    border: 1px solid white;
+  }
+  body.dark-mode .modal-header{
+color: white;
+  }
+  body.dark-mode .modal-content p{
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 20px;
+  }
+
+  body.dark-mode .cart-row span{
+    color: white;
+  }
+  

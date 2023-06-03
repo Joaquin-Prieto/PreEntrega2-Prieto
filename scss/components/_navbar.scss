@@ -1,5 +1,5 @@
 #Navbar{
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(165, 165, 165);
     height: 80px;
     
     ul{
@@ -80,22 +80,31 @@ justify-content: space-between;
     
 } 
 #nav_lista_1{
-grid-column:2 ;
-height: 40px;
+
+height: 60px;
 text-align: center;
 align-content: center;
 justify-content: center;
-margin-top: 20px;
+padding-top: 10px;
 margin-bottom: 20px;
+li{
+  width: 200px;
+  font-size: 19px;
+}
+ul{
+  width: 130px;
+}
 }
 #nav_lista_2{
 grid-column:3 ;
+width: auto;
 height: 40px;
 text-align: center;
 align-content: center;
 justify-content: center;
 margin-top: 20px;
 margin-bottom: 20px;
+
 }
 #nav_lista_3{
 grid-column:4 ;
@@ -108,17 +117,17 @@ margin-bottom: 20px;
 }
 #nav__cart{
   display: inline-flex!important;
-  margin-right:5% ;
+  margin-right:3% ;
   justify-content: space-between;
-  width: 30px;
+  width: 90px;
   height: 80px;
   
 }
 #nav_lista_cart{
   flex-direction: column!important;
-  height: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 80px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #CarritoImg{
@@ -131,7 +140,28 @@ margin-bottom: 20px;
 #carritodecompras{
   text-decoration: none;
   color: black;
-  height: 30px; 
+  margin-top: 20px;
+  height: 40px; 
   border: none;
   background-color: transparent;
+  padding: 0;
+}
+.cart__quantity{
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: 10px;
+  height: 10px;
+  margin-left: -15px;
+  position: relative;
+  top: -10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  color:white;
+  z-index: 1;
+  overflow-y: visible;
+
 }

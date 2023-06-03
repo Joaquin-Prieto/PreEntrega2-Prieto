@@ -1,7 +1,16 @@
+#main__guit{
+  margin-top: 8%;
+}
+#TLP{
+  width: 400px;
+  padding-left: 5%;
+  margin-top: 100px;
+  margin-left: 5%;
+}
 #stock {
   width: 1200px;
-  margin-top: 100px;
-  ;
+  margin-top: 10%;
+  
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -79,13 +88,19 @@ img {
 
 #stock {
   width: 1200px;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 550px 550px; }
-
+#sel__ordenar{
+  margin-left: 351.500px;
+  margin-top: 100px;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+}
 .cards {
   display: grid;
   grid-template-rows: 304px 146px;
@@ -131,7 +146,7 @@ img {
     margin-left: 10px; }
   .cardTxt p {
     margin-top: 20px; }
-    
+  
     
     
     
@@ -239,17 +254,63 @@ img {
   }
   
   .btn-purchase {
-      display: block;
-      margin: 40px auto 80px auto;
-      font-size: 1.75em;
-  }
+      display:block;
+      margin: 10px auto 20px auto;
+      font-size: 1.2em;
+      color: white;
+      font-family:'Nunito', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    
+      
+  } 
+   #btn_buy{
+        background-color: rgb(70, 139, 230);
+
+      
+        &:hover{
+          background-color: rgb(24, 99, 196);
+          text-decoration: underline;
+        }
+      }
+      #btn_empty{
+        background-color: #CC4C4C ;
+        &:hover{
+          background-color: rgb(255, 60, 60) ;
+          text-decoration: underline;
+        }
+      }
 .numero{
   width: 40px;
   text-align: center;
 }
 #seccion-carrito{
-  background-color: #d8d8d8!important;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  background-color: white;
+}
+#volver-a-tienda{
+  width: 200px;
+}
+footer{
+  height: 100px;
+  background-color: red;
+  color: white;
+ padding-top: 20px;
+}
+.p__footer{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+#carrito-vacio{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
+.disabled {
+  display: none;
+  }
